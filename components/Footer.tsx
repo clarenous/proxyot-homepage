@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-                    <p>© 2020 ProxyOT. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} ProxyOT. All rights reserved.</p>
                 </div>
             </div>
         </footer>
