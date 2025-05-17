@@ -72,8 +72,8 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
                 <div className="mb-6">
                     <h4 className="text-white font-medium mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                        {project.highlights.map((highlight, index) => (
-                            <li key={index} className="flex items-start">
+                        {project.highlights.map((highlight) => (
+                            <li key={highlight} className="flex items-start">
                                 <span className="text-primary mr-2">•</span>
                                 <span className="text-gray-400">{highlight}</span>
                             </li>
@@ -117,8 +117,8 @@ const Projects = () => {
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                    {projects.map((project) => (
+                        <ProjectCard key={project.githubUrl} project={project} />
                     ))}
                 </div>
             </div>
