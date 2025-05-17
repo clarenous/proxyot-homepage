@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, FC } from "react";
 
 interface Feature {
     title: string;
@@ -53,7 +53,7 @@ interface FeatureCardProps {
     index: number;
 }
 
-const FeatureCard = ({ feature, index }: FeatureCardProps) => {
+const FeatureCard: FC<FeatureCardProps> = ({ feature, index }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
