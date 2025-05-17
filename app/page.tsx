@@ -1,15 +1,19 @@
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Hello World! This is the Home page</p>
-      <p>
-        Visit the <Link href="/about">About</Link> page.
-      </p>
-    </div>
+    <main>
+      <Navbar />
+      <Hero />
+      <Features />
+      <About />
+      <Projects />
+      <Footer />
+    </main>
   );
-};
-
-export default Home;
+}
