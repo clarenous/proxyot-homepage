@@ -1,27 +1,34 @@
-# Next.js Static Export
+# ProxyOT Homepage
 
-Next.js enables starting as a static site or Single-Page Application (SPA), then later optionally upgrading to use features that require a server.
-
-When running `next build`, Next.js generates an HTML file per route. By breaking a strict SPA into individual HTML files, Next.js can avoid loading unnecessary JavaScript code on the client-side, reducing the bundle size and enabling faster page loads.
-
-Learn more: https://nextjs.org/docs/app/building-your-application/deploying/static-exports
+This repository contains the source code for the **ProxyOT** homepage. The site is built with Next.js and Tailwind CSS and is exported as static files so it can be deployed to any static hosting provider.
 
 ## Deploy your own
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-static-export)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/clarenous/proxyot-homepage)
 
-## How to use
+## Building locally
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-static-export with-static-export-app
-```
+Install dependencies and generate the static output:
 
 ```bash
-yarn create next-app --example with-static-export with-static-export-app
+npm install
+npm run build
 ```
 
+The exported site will be located in the `out/` directory. You can preview it locally with:
+
 ```bash
-pnpm create next-app --example with-static-export with-static-export-app
+npm run start
 ```
+
+## Deploying to Cloudflare Pages
+
+1. Install the [Wrangler CLI](https://developers.cloudflare.com/pages/get-started/).
+2. Publish the contents of the `out/` directory:
+
+```bash
+npx wrangler pages publish ./out --project-name=proxyot-homepage
+```
+
+Adjust the project name if your Cloudflare Pages project uses a different name. You can also deploy the `out/` directory to any other static hosting service.
+
