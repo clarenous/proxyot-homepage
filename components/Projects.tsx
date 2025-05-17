@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Placeholder from "@/components/ui/Placeholder";
+import type { FC } from "react";
 
 interface Project {
     title: string;
@@ -38,7 +39,7 @@ const projects: Project[] = [
     },
 ];
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard: FC<{ project: Project }> = ({ project }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
