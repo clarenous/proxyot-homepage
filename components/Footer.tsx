@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0">
                         <Link href="/" className="text-xl font-bold text-white flex items-center gap-2">
-                            <span className="text-primary">Proxy</span>OT
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Proxy</span>OT
                         </Link>
                         <p className="mt-2 text-sm">Proxy Oblivious Transfer for Data Sharing</p>
                     </div>

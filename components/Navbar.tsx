@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="text-xl font-bold text-white flex items-center gap-2">
-                        <span className="text-primary">Proxy</span>OT
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Proxy</span>OT
                     </Link>
                     <div className="flex items-center gap-8">
                         <div className="hidden md:flex space-x-8">
