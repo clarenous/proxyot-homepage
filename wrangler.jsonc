@@ -1,0 +1,7 @@
+{
+    "name": "proxyot-homepage",
+    "compatibility_date": "2025-05-17",
+    "assets": {
+        "directory": "./out"
+    }
+}
