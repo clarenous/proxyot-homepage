@@ -1,0 +1,12 @@
+<svg width="400" height="192" viewBox="0 0 400 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradProxy" x1="0" y1="0" x2="400" y2="192" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0070f3"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="192" rx="12" fill="url(#gradProxy)"/>
+  <g fill="white" fill-opacity="0.9" font-family="Arial, Helvetica, sans-serif" font-weight="bold">
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="48">ProxyOT</text>
+  </g>
+</svg>
