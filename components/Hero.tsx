@@ -16,7 +16,9 @@ const Hero = () => {
                         className="mb-8"
                     >
                         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                            Proxy <span className="text-primary">Oblivious</span> Transfer
+                            Proxy
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Oblivious</span>
+                            Transfer
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
                             A secure, efficient framework for privacy-preserving data sharing based on blockchain technology
@@ -31,7 +33,7 @@ const Hero = () => {
                     >
                         <Link
                             href="#projects"
-                            className="bg-primary hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-colors"
+                            className="bg-primary hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-colors transform hover:scale-105 duration-300"
                         >
                             View Projects
                         </Link>
@@ -39,7 +41,7 @@ const Hero = () => {
                             href="https://github.com/clarenous/proxyot"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-slate-800 hover:bg-slate-700 text-white font-medium py-3 px-8 rounded-lg transition-colors"
+                            className="bg-slate-800 hover:bg-slate-700 text-white font-medium py-3 px-8 rounded-lg transition-colors transform hover:scale-105 duration-300"
                         >
                             View on GitHub
                         </a>
