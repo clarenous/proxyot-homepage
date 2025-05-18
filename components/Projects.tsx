@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Placeholder from "@/components/ui/Placeholder";
+import Image from "next/image";
 import type { FC } from "react";
 
 interface Project {
@@ -10,6 +10,7 @@ interface Project {
     githubUrl: string;
     language: string;
     highlights: string[];
+    image: string;
 }
 
 const projects: Project[] = [
@@ -18,6 +19,7 @@ const projects: Project[] = [
         description: "The original implementation of Proxy Oblivious Transfer for Data Sharing based on BN256 curve.",
         githubUrl: "https://github.com/clarenous/proxyot",
         language: "Go",
+        image: "/projects/proxyot.svg",
         highlights: [
             "Secure data sharing mechanism",
             "BN256 curve implementation",
@@ -30,6 +32,7 @@ const projects: Project[] = [
         description: "Enhanced Proxy Oblivious Transfer Toolkit based on BLS12-381 curve.",
         githubUrl: "https://github.com/ProxyOT/POT",
         language: "Go",
+        image: "/projects/pot.svg",
         highlights: [
             "BLS12-381 curve implementation",
             "Improved security features",
@@ -48,8 +51,14 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             viewport={{ once: true }}
             className="bg-slate-800 rounded-xl overflow-hidden shadow-xl"
         >
-            <div className="h-48 bg-gradient-to-r from-blue-600 to-indigo-800 flex items-center justify-center">
-                <Placeholder text={project.title} />
+            <div className="h-48 relative">
+                <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                />
             </div>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
